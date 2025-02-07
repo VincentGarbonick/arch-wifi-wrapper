@@ -2,8 +2,8 @@
 #include <FL/Fl_Window.H>
 #include <FL/Fl_Button.H>
 #include <FL/Fl_Select_Browser.H>
-#include <string>
 #include <iostream>
+#include "functionality/scan.h"
 
 int PARENT_WIDTH = 500;
 int PARENT_HEIGHT = 500;
@@ -28,11 +28,14 @@ int main(int argc, char **argv) {
 				  WIFI_BROWSER_WIDTH,
 				  WIFI_BROWSER_HEIGHT);
 
-	Fl_Button *button = new Fl_Button(WIFI_SCAN_BUTTON_OFFSET_X,
+	Fl_Button *scan_button = new Fl_Button(WIFI_SCAN_BUTTON_OFFSET_X,
 					 WIFI_SCAN_BUTTON_OFFSET_Y,
 					 WIFI_SCAN_BUTTON_WIDTH,
 					 WIFI_SCAN_BUTTON_HEIGHT,
 					 WIFI_SCAN);
+	
+	//scan_button->callback(test)
+	test();
 
 	window->end();
 	window->show(argc, argv);
