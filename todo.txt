@@ -1,0 +1,2 @@
+you could make some kind of hotkey system to activate buttons. so that way, if you ever need to use this with a bigger monitor,
+you can just focus on the window and press hotkeys to do it`

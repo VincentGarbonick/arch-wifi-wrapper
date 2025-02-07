@@ -1,6 +1,7 @@
 #include <iostream>
+#include <FL/Fl.H>
 
-void test()
+void test(Fl_Widget* w, void*)
 {
 	std::cout << "hello world" << std::endl;
 }

@@ -1,6 +1,6 @@
 #ifndef SCAN_H
 #define SCAN_H
 
-void test();
+void test(Fl_Widget*, void*);
 
 #endif
