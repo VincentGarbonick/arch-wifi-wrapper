@@ -2,8 +2,9 @@
 #include <FL/Fl.H>
 #include <FL/Fl_Select_Browser.H>
 
-void test(Fl_Widget* w, void* p)
+void scan(Fl_Widget* w, void* p)
 {
-	((Fl_Select_Browser*)p)->add("skibidi");
+	Fl_Select_Browser* browser = ((Fl_Select_Browser*)p);
+	browser->add("hi");
 	return;
 }

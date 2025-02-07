@@ -34,8 +34,7 @@ int main(int argc, char **argv) {
 					 WIFI_SCAN_BUTTON_HEIGHT,
 					 WIFI_SCAN);
 	
-	int myNumber = 4;
-	scan_button->callback(test, &browser);
+	scan_button->callback(scan, &browser);
 
 	window->end();
 	window->show(argc, argv);
