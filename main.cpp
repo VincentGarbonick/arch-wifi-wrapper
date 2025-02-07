@@ -35,7 +35,7 @@ int main(int argc, char **argv) {
 					 WIFI_SCAN);
 	
 	int myNumber = 4;
-	scan_button->callback(test, &myNumber);
+	scan_button->callback(test, &browser);
 
 	window->end();
 	window->show(argc, argv);
