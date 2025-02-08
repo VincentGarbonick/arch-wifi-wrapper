@@ -5,6 +5,7 @@
 #include <sstream>
 #include "run.h"
 #include "../constants/constants.h"
+#include "parse.h"
 
 void scan(Fl_Widget* w, void* p)
 {
@@ -14,7 +15,9 @@ void scan(Fl_Widget* w, void* p)
 	std::istringstream stream(scan_output); 
     std::string line;
     
-    while(std::getline(stream, line)) {
+    while(std::getline(stream, line)) 
+	{
+		get_mac(line, 0);
 		browser->add(line.c_str());
     }
 	return;
