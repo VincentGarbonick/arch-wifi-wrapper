@@ -2,6 +2,7 @@
 #include <FL/Fl_Window.H>
 #include <FL/Fl_Button.H>
 #include <FL/Fl_Select_Browser.H>
+#include <FL/Fl_Output.H>
 #include <iostream>
 #include "functionality/scan.h"
 #include "functionality/run.h"
@@ -21,6 +22,16 @@ int main(int argc, char **argv)
 					 WIFI_SCAN_BUTTON_HEIGHT,
 					 WIFI_SCAN);
 	
+	Fl_Output *current_bar = new Fl_Output(CURRENT_BAR_OFFSET_X,
+					CURRENT_BAR_OFFSET_Y,
+					CURRENT_BAR_WIDTH,
+					CURRENT_BAR_HEIGHT);
+
+	Fl_Output *status_bar = new Fl_Output(STATUS_BAR_OFFSET_X,
+					STATUS_BAR_OFFSET_Y,
+					STATUS_BAR_WIDTH,
+					STATUS_BAR_HEIGHT);
+
 	scan_button->callback(scan, &browser);
 	window->end();
 	window->show(argc, argv);

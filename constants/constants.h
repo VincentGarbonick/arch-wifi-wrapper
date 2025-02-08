@@ -6,7 +6,7 @@ inline const int PARENT_HEIGHT = 500;
 inline const int PARENT_MARGIN_X = 10;
 inline const int PARENT_MARGIN_Y = 10;
 
-inline const int GENERAL_Y_MARGIN = 20;
+inline const int GENERAL_Y_MARGIN = 25;
 
 inline const int WIFI_BROWSER_WIDTH = PARENT_WIDTH - 20;
 inline const int WIFI_BROWSER_HEIGHT = PARENT_HEIGHT / 2;
