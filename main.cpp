@@ -11,16 +11,11 @@
 int main(int argc, char **argv) 
 {
 	Fl_Window *window = new Fl_Window(PARENT_WIDTH, PARENT_HEIGHT, APPNAME);
- 	Fl_Select_Browser browser(WIFI_BROWSER_OFFSET_X, 
-				  WIFI_BROWSER_OFFSET_Y,
-				  WIFI_BROWSER_WIDTH,
-				  WIFI_BROWSER_HEIGHT);
 
-	Fl_Button *scan_button = new Fl_Button(WIFI_SCAN_BUTTON_OFFSET_X,
-					 WIFI_SCAN_BUTTON_OFFSET_Y,
-					 WIFI_SCAN_BUTTON_WIDTH,
-					 WIFI_SCAN_BUTTON_HEIGHT,
-					 WIFI_SCAN);
+ 	Fl_Select_Browser browser(WIFI_BROWSER_OFFSET_X, 
+				  	WIFI_BROWSER_OFFSET_Y,
+				  	WIFI_BROWSER_WIDTH,
+				  	WIFI_BROWSER_HEIGHT);
 	
 	Fl_Output *current_bar = new Fl_Output(CURRENT_BAR_OFFSET_X,
 					CURRENT_BAR_OFFSET_Y,
@@ -31,6 +26,24 @@ int main(int argc, char **argv)
 					STATUS_BAR_OFFSET_Y,
 					STATUS_BAR_WIDTH,
 					STATUS_BAR_HEIGHT);
+
+	Fl_Button *scan_button = new Fl_Button(WIFI_SCAN_BUTTON_OFFSET_X,
+					WIFI_SCAN_BUTTON_OFFSET_Y,
+					WIFI_SCAN_BUTTON_WIDTH,
+					WIFI_SCAN_BUTTON_HEIGHT,
+					WIFI_SCAN);
+	
+	Fl_Button *connect_button = new Fl_Button(CONNECT_BUTTON_OFFSET_X,
+					CONNECT_BUTTON_OFFSET_Y,
+					CONNECT_BUTTON_WIDTH,
+					CONNECT_BUTTON_HEIGHT,
+					CONNECT);
+
+	Fl_Button *forget_button = new Fl_Button(FORGET_BUTTON_OFFSET_X,
+					FORGET_BUTTON_OFFSET_Y,
+					FORGET_BUTTON_WIDTH,
+					FORGET_BUTTON_HEIGHT,
+					FORGET);
 
 	scan_button->callback(scan, &browser);
 	window->end();

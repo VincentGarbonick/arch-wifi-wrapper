@@ -28,10 +28,23 @@ inline const int WIFI_SCAN_BUTTON_HEIGHT = 30;
 inline const int WIFI_SCAN_BUTTON_OFFSET_X = PARENT_MARGIN_X;
 inline const int WIFI_SCAN_BUTTON_OFFSET_Y = STATUS_BAR_OFFSET_Y + GENERAL_Y_MARGIN;
 
+inline const int CONNECT_BUTTON_WIDTH = 150;
+inline const int CONNECT_BUTTON_HEIGHT = 30;
+inline const int CONNECT_BUTTON_OFFSET_X = PARENT_MARGIN_X + WIFI_SCAN_BUTTON_WIDTH + 10;
+inline const int CONNECT_BUTTON_OFFSET_Y = WIFI_SCAN_BUTTON_OFFSET_Y;
+
+inline const int FORGET_BUTTON_WIDTH = 150;
+inline const int FORGET_BUTTON_HEIGHT = 30;
+inline const int FORGET_BUTTON_OFFSET_X = CONNECT_BUTTON_OFFSET_X + WIFI_SCAN_BUTTON_WIDTH + 10;
+inline const int FORGET_BUTTON_OFFSET_Y = WIFI_SCAN_BUTTON_OFFSET_Y;
+
+
 // label names
 inline const char * APPNAME = "Arch Wifi Wrapper";
 inline const char * WIFI_LIST = "Wifi List";
 inline const char * WIFI_SCAN = "Scan for Networks";
+inline const char * CONNECT = "Connect to Selected";
+inline const char * FORGET = "Forget Current Conn";
 
 // commands
 inline const char * CMD_SCAN_WIFI = "nmcli --terse --get-values bssid,ssid device wifi list";
