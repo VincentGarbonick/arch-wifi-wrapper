@@ -10,3 +10,5 @@ for actually worrying about passwords, prompt for a password and then if the use
 version of the command that doesn't use the password at all
 
 have some way of alternate coloring the line information when you scan
+
+g++ main.cpp ./functionality/scan.cpp ./functionality/run.cpp -o a.out -lfltk
