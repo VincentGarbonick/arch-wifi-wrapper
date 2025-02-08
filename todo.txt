@@ -8,3 +8,5 @@ nmcli --terse --get-values bssid,ssid device wifi list
 
 for actually worrying about passwords, prompt for a password and then if the user leaves it blank, run the 
 version of the command that doesn't use the password at all
+
+have some way of alternate coloring the line information when you scan
