@@ -7,7 +7,8 @@
 #include "functionality/run.h"
 #include "constants/constants.h"
 
-int main(int argc, char **argv) {
+int main(int argc, char **argv) 
+{
 	Fl_Window *window = new Fl_Window(PARENT_WIDTH, PARENT_HEIGHT, APPNAME);
  	Fl_Select_Browser browser(WIFI_BROWSER_OFFSET_X, 
 				  WIFI_BROWSER_OFFSET_Y,
