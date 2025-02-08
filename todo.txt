@@ -1,2 +1,8 @@
 you could make some kind of hotkey system to activate buttons. so that way, if you ever need to use this with a bigger monitor,
 you can just focus on the window and press hotkeys to do it`
+
+current connection tab (figure out if you can detect wired)
+
+enable/disable wifi button have the button toggle between "enabled" and "disabled" when you're futzing around with it
+nmcli --terse --get-values bssid,ssid device wifi list
+

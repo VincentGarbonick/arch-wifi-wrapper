@@ -4,6 +4,7 @@
 #include <FL/Fl_Select_Browser.H>
 #include <iostream>
 #include "functionality/scan.h"
+#include "functionality/run.h"
 
 int PARENT_WIDTH = 500;
 int PARENT_HEIGHT = 500;
@@ -35,7 +36,7 @@ int main(int argc, char **argv) {
 					 WIFI_SCAN);
 	
 	scan_button->callback(scan, &browser);
-
+	std::cout << run_command("/bin/ls") << std::endl;
 	window->end();
 	window->show(argc, argv);
 	return Fl::run();
