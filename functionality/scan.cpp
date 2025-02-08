@@ -4,8 +4,8 @@
 #include <string>
 #include <sstream>
 #include "run.h"
-#include "../constants/constants.h"
 #include "parse.h"
+#include "../constants/constants.h"
 
 void scan(Fl_Widget* w, void* p)
 {

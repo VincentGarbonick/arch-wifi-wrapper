@@ -18,19 +18,8 @@ button to forget network
 have talise password written down on a peice of paper so I can fuck with stuff, though make sure to not 
 upload to github
 
-// these will be used just about everywhere in all of my funcitons
-get_MAC_from_line(line) {
-    return start pos of mac addr
-    return end pos of mac addr
-    return contents of mac addr (without slashes)
-    return escape_included
-}
-
-get_network_name_from_line(line) {
-    return start/end pos
-    return if contents exists
-    return contetns 
-}
+status bar below the browser box. if theres no selection for example: say "no selection." Maybe open with "welcome to xyz"
+current connection bar
 
 also at some point you're going to want to have a windows/mobile/etc switch for compiling shit, where you define
 the commands dynamically

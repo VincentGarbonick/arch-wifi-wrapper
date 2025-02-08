@@ -1,0 +1,30 @@
+nmcli --terse connection show --active (could be a way to show current device connected) (maybe I can just use one of the args that only outputs the name) 
+	- figure out case when it has no name 
+	- figure out case when it is wired connection 
+
+
+box for current connection status (have it refresh each time we run a command)
+box for general status (have it refresh each time we push a button)
+button to forget current connection 
+button to enable/disable wifi
+button to connect, obviously
+some kind of global variable that stores current connection, so we don't have to make seperate calls when we initialize it?
+nmcli --terse connection delete [uuid, etc]
+
+Starting loop: 
+check if wifi is enabled/disabled (if disabled, populate status bar and have button label reflect that)
+check if we have an active connection (if yes, put in global variable and populate status bar, if no, populate status bar)
+
+Buttons 
+-------------------------------
+Scan for networks 
+Connect to selected 
+forget current 
+
+enable/disable 
+
+boxes 
+--------------------
+scan results 
+current connection
+status bar(first thing it says on startup should be "enabled/disabled") (make this scrollable?)

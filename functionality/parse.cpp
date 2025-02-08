@@ -10,7 +10,7 @@ parsed_ncmli_list_output parse_nmcli_list_output(std::string line, bool include_
 {
     // our line will always look the same, so we can directly index
     // MAC portion is 0-21 inclusive
-    std::string mac_component = line.substr(MAC_ADDR_START, MAC_ADDR_END); 
+    std::string mac_component = line.substr(RAW_MAC_ADDR_START, RAW_MAC_ADDR_END); 
     std::string network_name_component = line.substr(23);
 
     if(include_escape == false)
