@@ -6,3 +6,5 @@ current connection tab (figure out if you can detect wired)
 enable/disable wifi button have the button toggle between "enabled" and "disabled" when you're futzing around with it
 nmcli --terse --get-values bssid,ssid device wifi list
 
+for actually worrying about passwords, prompt for a password and then if the user leaves it blank, run the 
+version of the command that doesn't use the password at all
