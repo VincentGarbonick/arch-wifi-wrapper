@@ -1,3 +1,3 @@
 ## Compilation
-g++ aww.cpp -o a.out -lfltk
+g++ mian.cpp ./functionality/scan.cpp ./functionality/run.cpp ./functionality/parse.cpp -o a.out -lfltk
 
