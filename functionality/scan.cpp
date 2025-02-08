@@ -17,7 +17,7 @@ void scan(Fl_Widget* w, void* p)
     
     while(std::getline(stream, line)) 
 	{
-		get_mac(line, 0);
+		parse_nmcli_list_output(line, 0);
 		browser->add(line.c_str());
     }
 	return;
