@@ -19,4 +19,7 @@ inline const char * WIFI_LIST = "Wifi List";
 inline const char * WIFI_SCAN = "Scan for Networks";
 // commands
 inline const char * CMD_SCAN_WIFI = "nmcli --terse --get-values bssid,ssid device wifi list";
+// positions for mac address
+inline const int MAC_ADDR_START = 0;
+inline const int MAC_ADDR_END = 22;
 #endif
