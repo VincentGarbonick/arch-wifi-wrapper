@@ -12,38 +12,66 @@ int main(int argc, char **argv)
 {
 	Fl_Window *window = new Fl_Window(PARENT_WIDTH, PARENT_HEIGHT, APPNAME);
 
- 	Fl_Select_Browser browser(WIFI_BROWSER_OFFSET_X, 
+ 	Fl_Select_Browser browser(
+					WIFI_BROWSER_OFFSET_X, 
 				  	WIFI_BROWSER_OFFSET_Y,
 				  	WIFI_BROWSER_WIDTH,
-				  	WIFI_BROWSER_HEIGHT);
+				  	WIFI_BROWSER_HEIGHT
+				);
 	
-	Fl_Output *current_bar = new Fl_Output(CURRENT_BAR_OFFSET_X,
+	Fl_Output *current_bar = new Fl_Output(
+					CURRENT_BAR_OFFSET_X,
 					CURRENT_BAR_OFFSET_Y,
 					CURRENT_BAR_WIDTH,
-					CURRENT_BAR_HEIGHT);
+					CURRENT_BAR_HEIGHT
+				);
 
-	Fl_Output *status_bar = new Fl_Output(STATUS_BAR_OFFSET_X,
+	Fl_Output *status_bar = new Fl_Output(
+					STATUS_BAR_OFFSET_X,
 					STATUS_BAR_OFFSET_Y,
 					STATUS_BAR_WIDTH,
-					STATUS_BAR_HEIGHT);
+					STATUS_BAR_HEIGHT
+				);
 
-	Fl_Button *scan_button = new Fl_Button(WIFI_SCAN_BUTTON_OFFSET_X,
+	Fl_Button *scan_button = new Fl_Button(
+					WIFI_SCAN_BUTTON_OFFSET_X,
 					WIFI_SCAN_BUTTON_OFFSET_Y,
 					WIFI_SCAN_BUTTON_WIDTH,
 					WIFI_SCAN_BUTTON_HEIGHT,
-					WIFI_SCAN);
+					WIFI_SCAN
+				);
 	
-	Fl_Button *connect_button = new Fl_Button(CONNECT_BUTTON_OFFSET_X,
+	Fl_Button *connect_button = new Fl_Button(
+					CONNECT_BUTTON_OFFSET_X,
 					CONNECT_BUTTON_OFFSET_Y,
 					CONNECT_BUTTON_WIDTH,
 					CONNECT_BUTTON_HEIGHT,
-					CONNECT);
+					CONNECT
+				);
 
-	Fl_Button *forget_button = new Fl_Button(FORGET_BUTTON_OFFSET_X,
+	Fl_Button *forget_button = new Fl_Button(
+					FORGET_BUTTON_OFFSET_X,
 					FORGET_BUTTON_OFFSET_Y,
 					FORGET_BUTTON_WIDTH,
 					FORGET_BUTTON_HEIGHT,
-					FORGET);
+					FORGET
+				);
+
+	Fl_Button *enable_button = new Fl_Button(
+					ENABLE_BUTTON_OFFSET_X,
+					ENABLE_BUTTON_OFFSET_Y,
+					ENABLE_BUTTON_WIDTH,
+					ENABLE_BUTTON_HEIGHT,
+					ENABLED_WIFI
+				);
+
+	Fl_Button *help_button = new Fl_Button(
+					HELP_BUTTON_OFFSET_X,
+					HELP_BUTTON_OFFSET_Y,
+					HELP_BUTTON_WIDTH,
+					HELP_BUTTON_HEIGHT,
+					HELP
+				);
 
 	scan_button->callback(scan, &browser);
 	window->end();
