@@ -73,6 +73,14 @@ int main(int argc, char **argv)
 					HELP
 				);
 
+	Fl_Button *exit_buton = new Fl_Button(
+					EXIT_BUTTON_OFFSET_X,
+					EXIT_BUTTON_OFFSET_Y,
+					EXIT_BUTTON_WIDTH,
+					EXIT_BUTTON_HEIGHT,
+					EXIT
+	);
+
 	scan_button->callback(scan, &browser);
 	window->end();
 	window->show(argc, argv);
