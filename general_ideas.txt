@@ -19,7 +19,7 @@ Buttons
 -------------------------------
 Scan for networks 
 Connect to selected 
-forget current 
+forget current (have an "are you sure?" window)
 
 enable/disable 
 
