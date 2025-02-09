@@ -28,3 +28,73 @@ boxes
 scan results 
 current connection
 status bar(first thing it says on startup should be "enabled/disabled") (make this scrollable?)
+
+
+Feedback from claude (in addition to the namespace issues)
+
+Let me analyze the codebase systematically:
+
+1. Memory Management:
+```cpp
+// In main.cpp, you're using raw pointers
+Fl_Window *window = new Fl_Window(...);
+Fl_Output *current_bar = new Fl_Output(...);
+// etc...
+```
+You're not deleting these anywhere. While FLTK might handle some cleanup, it's better to either:
+- Use smart pointers
+- Or let FLTK manage everything by making them stack objects when possible
+
+2. Error Handling:
+```cpp
+// In run.cpp
+std::string run_command(const std::string& command)
+{
+    if ((pPipe = popen(command.c_str(), "r")) == NULL) {
+        std::cerr << "Cannot start command: " << strerror(errno) << std::endl;
+        return "";
+    }
+```
+- Could use exceptions instead of returning empty string
+- No handling of command injection (though this might be intentional for your use case)
+
+3. Parse Function:
+```cpp
+// In parse.cpp
+parsed_ncmli_list_output parse_nmcli_list_output(std::string line, bool include_escape)
+```
+- Could take string by const reference to avoid copying
+- Magic number 23 in `line.substr(23)` should be a constant
+
+4. Scan Function:
+```cpp
+void scan(Fl_Widget* w, void* p)
+{
+    Fl_Select_Browser* browser = ((Fl_Select_Browser*)p);
+```
+- No validation if the cast succeeded
+- Comment says "TODO: color output" - might want to implement that
+- No error handling if nmcli command fails
+
+5. Header Files:
+- Some headers include more than they need
+- Some missing include guards in the headers you haven't shown
+- Inconsistent include style (some use `<>`, others use `""`)
+
+6. Interface Design:
+- Status bar and current bar are created but not used in the code shown
+- No tooltips on buttons
+- No keyboard shortcuts
+
+7. Constants:
+```cpp
+inline const char * CMD_SCAN_WIFI = "nmcli --terse --get-values bssid,ssid device wifi list";
+```
+- Consider having a configuration file for commands instead of hardcoding
+- Could add error checking for nmcli availability at startup
+
+8. Build System:
+- Using direct g++ command instead of Make/CMake
+- No separate debug/release configurations
+
+None of these are critical issues, but they could be improved based on your needs. Let me know if you want me to elaborate on any of these points!

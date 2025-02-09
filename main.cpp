@@ -3,9 +3,9 @@
 #include <FL/Fl_Button.H>
 #include <FL/Fl_Select_Browser.H>
 #include <FL/Fl_Output.H>
-#include <iostream>
 #include "functionality/scan.h"
 #include "functionality/run.h"
+#include "functionality/exit.h"
 #include "constants/constants.h"
 
 int main(int argc, char **argv) 
@@ -73,7 +73,7 @@ int main(int argc, char **argv)
 					HELP
 				);
 
-	Fl_Button *exit_buton = new Fl_Button(
+	Fl_Button *exit_button = new Fl_Button(
 					EXIT_BUTTON_OFFSET_X,
 					EXIT_BUTTON_OFFSET_Y,
 					EXIT_BUTTON_WIDTH,
@@ -82,6 +82,7 @@ int main(int argc, char **argv)
 	);
 
 	scan_button->callback(scan, &browser);
+	exit_button->callback(close_app);
 	window->end();
 	window->show(argc, argv);
 	return Fl::run();
