@@ -11,7 +11,9 @@
 #include "constants/callback-data.h"
 
 int main(int argc, char **argv) 
-{
+{	
+	// TODO: check if nmcli is installed at all, and display a "you don't have this installed"
+	// screen if not
 	Fl_Window *window = new Fl_Window(PARENT_WIDTH, PARENT_HEIGHT, APPNAME);
 
  	Fl_Select_Browser browser(
