@@ -1,6 +1,8 @@
 #ifndef CONSTANTS_H
 #define CONSTANTS_H
 
+// TODO: Implement namespace for this!
+
 // app dimensions
 inline const int PARENT_WIDTH = 500;
 inline const int PARENT_HEIGHT = 400;
@@ -80,6 +82,7 @@ inline const char * CMD_SCAN_WIFI = "nmcli --terse --get-values bssid,ssid devic
 inline const int RAW_MAC_ADDR_START = 0;
 inline const int RAW_MAC_ADDR_END = 22;
 
-// misc
+// output messages
 inline const char * EXECUTION_ERROR = "Error executing command";
+inline const char * SCAN_SUCCESSFUL = "Scan successful!";
 #endif
