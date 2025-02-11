@@ -91,6 +91,9 @@ inline const int RAW_MAC_ADDR_END = 22;
 // TODO: append OUTPUT_
 inline const char * EXECUTION_ERROR = "Error executing command";
 inline const char * SCAN_SUCCESSFUL = "Scan successful!";
+inline const char * TOGGLE_ERROR = "Error toggling wifi!";
+inline const char * DISABLED_SUCCESSFUL_MESSAGE = "You have diabled the wifi.";
+inline const char * ENABLED_SUCCESSFUL_MESSAGE = "You have enabled the wifi.";
 
 // misc 
 inline const std::string NMCLI_WIFI_ENABLED = "enabled";

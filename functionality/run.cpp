@@ -46,6 +46,7 @@ std::string run_command(const std::string& command, Fl_Output * output)
         std::cerr << EXECUTION_ERROR << "\n";
         output->value(EXECUTION_ERROR);
         output->redraw();
+        return "";
     }
 
     pclose(pPipe);
