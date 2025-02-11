@@ -30,6 +30,10 @@ current connection
 status bar(first thing it says on startup should be "enabled/disabled") (make this scrollable?)
 
 
+valgrind --leak-check=full ./your_program
+
+USE VALDGRIND TO CHECK FOR MEMORY LEAKS
+
 Feedback from claude (in addition to the namespace issues)
 
 Let me analyze the codebase systematically:
@@ -44,6 +48,9 @@ Fl_Output *current_bar = new Fl_Output(...);
 You're not deleting these anywhere. While FLTK might handle some cleanup, it's better to either:
 - Use smart pointers
 - Or let FLTK manage everything by making them stack objects when possible
+
+(I later asked about this in a different claue chat- FLTK cleans up its own pointers
+so as long as I'm not using my own heap allocaoitns, we gucci.)
 
 2. Error Handling:
 ```cpp

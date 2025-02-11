@@ -6,6 +6,7 @@
 #include "run.h"
 #include "parse.h"
 #include "../constants/constants.h"
+#include "../constants/callback-data.h"
 
 void scan(Fl_Widget* w, void* p)
 {
