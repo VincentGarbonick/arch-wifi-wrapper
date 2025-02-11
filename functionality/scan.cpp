@@ -12,7 +12,7 @@ void scan(Fl_Widget* w, void* p)
 {
 	scan_args* s_args = ((scan_args*)p);
 	s_args->browser->clear();
-	std::string scan_output = run_command(CMD_SCAN_WIFI);
+	std::string scan_output = run_command(CMD_SCAN_WIFI, s_args->output);
 	std::istringstream stream(scan_output); 
     std::string line;
 	parsed_ncmli_list_output parsed_ncmli_element_output;
