@@ -84,9 +84,6 @@ int main(int argc, char **argv)
 					EXIT_BUTTON_HEIGHT,
 					EXIT
 	);
-
-	// TODO: when we turn the app on, we check the wifi status and set the inital button state
-
 	static scan_args s_args{&browser, status_bar};
 	scan_button->callback(scan, &s_args);
 	enable_button->callback(toggle_wifi, status_bar);
