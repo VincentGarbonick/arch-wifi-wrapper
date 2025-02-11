@@ -66,7 +66,7 @@ int main(int argc, char **argv)
 					ENABLE_BUTTON_OFFSET_Y,
 					ENABLE_BUTTON_WIDTH,
 					ENABLE_BUTTON_HEIGHT,
-					ENABLED_WIFI
+					return_wifi_status_label()
 				);
 
 	Fl_Button *help_button = new Fl_Button(

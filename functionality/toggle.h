@@ -13,5 +13,6 @@ void safe_toggle_button_text(std::string,
 							 const char *,
 							 const char *);
 std::string get_wifi_status();
+const char * return_wifi_status_label();
 
 #endif

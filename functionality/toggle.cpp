@@ -66,3 +66,17 @@ std::string get_wifi_status()
 						  				  current_wifi_status.end());
 	return current_wifi_status;
 }
+
+// this is for when we first draw the button
+// it just tells us what label to use
+const char * return_wifi_status_label()
+{
+	if(get_wifi_status() == NMCLI_WIFI_ENABLED)
+	{
+		return ENABLED_WIFI;
+	}
+	else 
+	{
+		return DISABLED_WIFI;
+	}
+}
