@@ -29,6 +29,9 @@ scan results
 current connection
 status bar(first thing it says on startup should be "enabled/disabled") (make this scrollable?)
 
+general
+--------------------
+harden error handling all over the place
 
 valgrind --leak-check=full ./your_program
 

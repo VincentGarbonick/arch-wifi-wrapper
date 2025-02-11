@@ -5,8 +5,8 @@
 #include <sstream>
 #include "run.h"
 #include "parse.h"
-#include "../constants/constants.h"
-#include "../constants/callback-data.h"
+#include "../constants/main_constants.h"
+#include "../constants/callback_data.h"
 
 void scan(Fl_Widget* w, void* p)
 {

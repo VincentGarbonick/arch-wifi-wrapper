@@ -6,7 +6,7 @@
 #include <algorithm>
 #include "run.h"
 #include "toggle.h"
-#include "../constants/constants.h"
+#include "../constants/main_constants.h"
 
 void toggle_wifi(Fl_Widget* wifi_button, void* p_status_bar)
 {

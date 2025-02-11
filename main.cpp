@@ -7,8 +7,8 @@
 #include "functionality/run.h"
 #include "functionality/exit.h"
 #include "functionality/toggle.h"
-#include "constants/constants.h"
-#include "constants/callback-data.h"
+#include "constants/main_constants.h"
+#include "constants/callback_data.h"
 
 int main(int argc, char **argv) 
 {	

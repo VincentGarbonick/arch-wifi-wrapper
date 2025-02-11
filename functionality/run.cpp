@@ -3,7 +3,7 @@
 #include <cstring>
 #include <errno.h>
 #include <FL/Fl_Output.H>
-#include "../constants/constants.h"
+#include "../constants/main_constants.h"
 
 // https://cplusplus.com/forum/beginner/176747/
 std::string run_command(const std::string& command)

@@ -2,7 +2,7 @@
 #include <iostream>
 #include <algorithm>
 #include "../constants/mac.h"
-#include "../constants/constants.h"
+#include "../constants/main_constants.h"
 
 // if include_escape is true, will include the forward slashes in original terminal output
 // expected input: E8\:D3\:EB\:33\:7B\:03:network_name

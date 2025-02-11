@@ -24,4 +24,4 @@ current connection bar
 also at some point you're going to want to have a windows/mobile/etc switch for compiling shit, where you define
 the commands dynamically
 
-optimize the constants.h to use namespace, all explicit names, etc
+optimize the main_constants.h to use namespace, all explicit names, etc
