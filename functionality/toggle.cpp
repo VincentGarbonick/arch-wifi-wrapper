@@ -1,6 +1,6 @@
 #include <iostream>
 #include <FL/Fl.H>
-#include <FL/Fl_Select_Browser.H>
+#include <FL/Fl_Output.H>
 #include <string>
 #include <sstream>
 #include "run.h"
@@ -8,6 +8,10 @@
 
 void toggle_wifi(Fl_Widget* w, void* p)
 {
+	Fl_Output* output = ((Fl_Output*)p);
+	output->value("farty poopy shitty");
+	output->redraw();
+
     // placeholder for real function 
     
 	// std::string scan_output = run_command(CMD_SCAN_WIFI);

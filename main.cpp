@@ -6,6 +6,7 @@
 #include "functionality/scan.h"
 #include "functionality/run.h"
 #include "functionality/exit.h"
+#include "functionality/toggle.h"
 #include "constants/constants.h"
 #include "constants/callback-data.h"
 
@@ -84,6 +85,7 @@ int main(int argc, char **argv)
 
 	static scan_args s_args{&browser, status_bar};
 	scan_button->callback(scan, &s_args);
+	enable_button->callback(toggle_wifi, status_bar);
 	exit_button->callback(close_app);
 	window->end();
 	window->show(argc, argv);
