@@ -10,8 +10,8 @@
 
 void scan(Fl_Widget* w, void* p)
 {
-	Fl_Select_Browser* browser = ((Fl_Select_Browser*)p);
-	browser->clear();
+	scan_args* s_args = ((scan_args*)p);
+	s_args->browser->clear();
 	std::string scan_output = run_command(CMD_SCAN_WIFI);
 	std::istringstream stream(scan_output); 
     std::string line;
@@ -28,7 +28,7 @@ void scan(Fl_Widget* w, void* p)
 				<< "\t" 
 				<< parsed_ncmli_element_output.network_name;
     	std::string formatted_line = format_stream.str();
-		browser->add(formatted_line.c_str());
+		s_args->browser->add(formatted_line.c_str());
     }
 	return;
 }
