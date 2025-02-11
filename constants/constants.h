@@ -83,6 +83,7 @@ inline const int RAW_MAC_ADDR_START = 0;
 inline const int RAW_MAC_ADDR_END = 22;
 
 // output messages
+// TODO: append OUTPUT_
 inline const char * EXECUTION_ERROR = "Error executing command";
 inline const char * SCAN_SUCCESSFUL = "Scan successful!";
 #endif
