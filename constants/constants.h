@@ -1,7 +1,9 @@
 #ifndef CONSTANTS_H
 #define CONSTANTS_H
 
+#include <string>
 // TODO: Implement namespace for this!
+// TODO: Make your y direction for the buttons "row 1, row 2, etc"
 
 // app dimensions
 inline const int PARENT_WIDTH = 500;
@@ -77,6 +79,9 @@ inline const char * EXIT = "Exit";
 
 // commands
 inline const char * CMD_SCAN_WIFI = "nmcli --terse --get-values bssid,ssid device wifi list";
+inline const char * CMD_WIFI_OFF = "nmcli radio wifi off";
+inline const char * CMD_WIFI_ON = "nmcli radio wifi on";
+inline const char * CMD_WIFI_CHECK = "nmcli radio wifi";
 
 // positions for mac address
 inline const int RAW_MAC_ADDR_START = 0;
@@ -86,4 +91,8 @@ inline const int RAW_MAC_ADDR_END = 22;
 // TODO: append OUTPUT_
 inline const char * EXECUTION_ERROR = "Error executing command";
 inline const char * SCAN_SUCCESSFUL = "Scan successful!";
+
+// misc 
+inline const std::string NMCLI_WIFI_ENABLED = "enabled";
+inline const std::string NMCLI_WIFI_DISABLED = "disabled";
 #endif
