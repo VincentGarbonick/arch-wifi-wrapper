@@ -84,6 +84,8 @@ int main(int argc, char **argv)
 					EXIT_BUTTON_HEIGHT,
 					EXIT
 	);
+	status_bar->value(WELCOME_MESSAGE);
+	status_bar->redraw();
 	static scan_args s_args{&browser, status_bar};
 	scan_button->callback(scan, &s_args);
 	enable_button->callback(toggle_wifi, status_bar);

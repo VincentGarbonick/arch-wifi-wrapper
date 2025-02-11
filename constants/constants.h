@@ -76,6 +76,7 @@ inline const char * ENABLED_WIFI = "Wifi Enabled";
 inline const char * DISABLED_WIFI = "Wifi Disabled";
 inline const char * HELP = "Help";
 inline const char * EXIT = "Exit";
+inline const char * WELCOME_MESSAGE = "Welcome to the arch nmcli wrapper!";
 
 // commands
 inline const char * CMD_SCAN_WIFI = "nmcli --terse --get-values bssid,ssid device wifi list";
