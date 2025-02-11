@@ -31,7 +31,6 @@ void toggle_wifi(Fl_Widget* wifi_button, void* p_status_bar)
 								ENABLED_WIFI,
 								ENABLED_SUCCESSFUL_MESSAGE);
 	}
-
 	return;
 }
 
@@ -47,13 +46,13 @@ void safe_toggle_button_text(std::string desired_output,
 	{
 		button->label(toggle_to);
 		button->redraw();
-		status_bar->label(output_successful_message);
+		status_bar->value(output_successful_message);
 		status_bar->redraw();
 	}
 	else
 	{
 		std::cout << "There was some kind of error when toggling" << std::endl;
-		status_bar->label(TOGGLE_ERROR);
+		status_bar->value(TOGGLE_ERROR);
 		status_bar->redraw();
 	}
 }
