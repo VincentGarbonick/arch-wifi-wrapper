@@ -60,7 +60,7 @@ void safe_toggle_button_text(std::string desired_output,
 std::string get_wifi_status()
 {
 	std::string current_wifi_status = run_command(CMD_WIFI_CHECK);
-		// result has a newline, so we must trim it
+	// result has a newline, so we must trim it
 	current_wifi_status.erase(std::remove(current_wifi_status.begin(), 
 						  				  current_wifi_status.end(), '\n'), 
 						  				  current_wifi_status.end());
