@@ -2,11 +2,13 @@
 #include <FL/Fl_Button.H>
 #include <FL/Fl_Select_Browser.H>
 #include <FL/Fl_Output.H>
+#include <FL/fl_ask.H>
 #include "scan.h"
 #include "run.h"
 #include "exit.h"
 #include "toggle.h"
 #include "../constants/main_constants.h"
+#include "../constants/no_nmcli_constants.h"
 #include "../constants/callback_data.h"
 
 // TODO: does putting our window/app definitions in a function make this cause memory leaks?
@@ -94,5 +96,6 @@ void draw_main_app(int argc, char **argv)
 
 void draw_no_nmcli_screen()
 {
-	return;
+	fl_message_title(no_nmcli_constants::TITLE);
+	fl_message(no_nmcli_constants::MESSAGE);
 }
