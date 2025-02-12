@@ -26,6 +26,7 @@ std::string run_command(const std::string& command)
     return result;
 }
 
+// TODO: you can use exit status of bash commands!
 // TODO: test this by making a command that explicitly errors out to see if things output properly
 std::string run_command(const std::string& command, Fl_Output * output)
 {

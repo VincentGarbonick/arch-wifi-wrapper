@@ -8,6 +8,7 @@
 #include "../constants/main_constants.h"
 #include "../constants/callback_data.h"
 
+// TODO: exit status of 0, 1 etc to see if commands work my slime 
 void scan(Fl_Widget* w, void* p)
 {
 	scan_args* s_args = ((scan_args*)p);

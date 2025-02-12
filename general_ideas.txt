@@ -32,6 +32,7 @@ status bar(first thing it says on startup should be "enabled/disabled") (make th
 general
 --------------------
 harden error handling all over the place
+I think you can use exit status for errors when running console commands 
 
 valgrind --leak-check=full ./your_program
 
