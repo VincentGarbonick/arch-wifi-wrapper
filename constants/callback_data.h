@@ -10,4 +10,10 @@ struct scan_args
     Fl_Output * output;
 };
 
+struct connect_args
+{
+    Fl_Select_Browser * browser;
+    Fl_Output * output;
+};
+
 #endif

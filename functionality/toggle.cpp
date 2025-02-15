@@ -6,8 +6,10 @@
 #include <algorithm>
 #include "run.h"
 #include "toggle.h"
+#include "scan.h"
 #include "../constants/main_constants.h"
 
+// TODO: update wifi status bar when you toggle shit, by using the print_wifi_status funciton 
 void toggle_wifi(Fl_Widget* wifi_button, void* p_status_bar)
 {
 	Fl_Output* status_bar = ((Fl_Output*)p_status_bar);

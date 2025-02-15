@@ -10,11 +10,12 @@
 #include "../constants/main_constants.h"
 #include "../constants/no_nmcli_constants.h"
 #include "../constants/callback_data.h"
-
+#include <iostream>
 // TODO: does putting our window/app definitions in a function make this cause memory leaks?
 // or is it safe to do so?
 void draw_main_app(int argc, char **argv)
 {
+	// TODO: put initial wifi con into wifi status bar when initializing applicaiton
 	Fl_Window *window = new Fl_Window(PARENT_WIDTH, PARENT_HEIGHT, APPNAME);
  	Fl_Select_Browser *browser = new Fl_Select_Browser(
 					WIFI_BROWSER_OFFSET_X, 
@@ -86,6 +87,7 @@ void draw_main_app(int argc, char **argv)
 	);
 	status_bar->value(WELCOME_MESSAGE);
 	status_bar->redraw();
+	std::cout << run_command(CMD_GET_CURRENT_CONN) << std::endl;
 	static scan_args s_args{browser, status_bar};
 	scan_button->callback(scan, &s_args);
 	enable_button->callback(toggle_wifi, status_bar);

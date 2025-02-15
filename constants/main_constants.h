@@ -83,6 +83,7 @@ inline const char * CMD_SCAN_WIFI = "nmcli --terse --get-values bssid,ssid devic
 inline const char * CMD_WIFI_OFF = "nmcli radio wifi off";
 inline const char * CMD_WIFI_ON = "nmcli radio wifi on";
 inline const char * CMD_WIFI_CHECK = "nmcli radio wifi";
+inline const char * CMD_GET_CURRENT_CONN = "nmcli -t -f NAME,TYPE connection show --active | grep -vE '^(lo|Wired connection)' | awk -F: '$2 != 'ethernet' {print $1}'";
 
 // positions for mac address
 inline const int RAW_MAC_ADDR_START = 0;
@@ -95,6 +96,7 @@ inline const char * SCAN_SUCCESSFUL = "Scan successful!";
 inline const char * TOGGLE_ERROR = "Error toggling wifi!";
 inline const char * DISABLED_SUCCESSFUL_MESSAGE = "You have disabled the wifi.";
 inline const char * ENABLED_SUCCESSFUL_MESSAGE = "You have enabled the wifi.";
+inline const std::string NO_WIFI_WIFI_STATUS_BAR = "You are disconnected from wifi.";
 
 // procedural button labels 
 inline const std::string NMCLI_WIFI_ENABLED = "enabled";
