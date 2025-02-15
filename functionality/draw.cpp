@@ -99,3 +99,17 @@ void draw_no_nmcli_screen()
 	fl_message_title(no_nmcli_constants::TITLE);
 	fl_message(no_nmcli_constants::MESSAGE);
 }
+
+bool host_has_nmcli()
+{
+	int exit_status = run_command_get_exit_status(CMD_WIFI_CHECK);
+
+	if(exit_status == 0)
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}
