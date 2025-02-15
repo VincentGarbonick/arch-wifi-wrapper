@@ -96,7 +96,7 @@ inline const char * TOGGLE_ERROR = "Error toggling wifi!";
 inline const char * DISABLED_SUCCESSFUL_MESSAGE = "You have disabled the wifi.";
 inline const char * ENABLED_SUCCESSFUL_MESSAGE = "You have enabled the wifi.";
 
-// misc 
+// procedural button labels 
 inline const std::string NMCLI_WIFI_ENABLED = "enabled";
 inline const std::string NMCLI_WIFI_DISABLED = "disabled";
 #endif
