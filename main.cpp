@@ -5,7 +5,7 @@ int main(int argc, char **argv)
 {	
 	if(host_has_nmcli())
 	{
-		draw_main_app();
+		draw_main_app(argc, argv);
 	}
 	else 
 	{
