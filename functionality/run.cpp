@@ -53,3 +53,8 @@ std::string run_command(const std::string& command, Fl_Output * output)
     pclose(pPipe);
     return result;
 }
+
+int run_command_get_exit_status(const char * command)
+{
+    return system(command);
+}
