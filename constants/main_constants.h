@@ -79,7 +79,8 @@ inline const char * EXIT = "Exit";
 inline const char * WELCOME_MESSAGE = "Welcome to the arch nmcli wrapper!";
 
 // commands
-inline const char * CMD_SCAN_WIFI = "nmcli --terse --get-values bssid,ssid device wifi list";
+inline const char * CMD_SCAN_WIFI = "nmcli --terse --get-values ssid device wifi list";
+// inline const char * CMD_SCAN_WIFI = "nmcli --terse --get-values bssid,ssid device wifi list";
 inline const char * CMD_WIFI_OFF = "nmcli radio wifi off";
 inline const char * CMD_WIFI_ON = "nmcli radio wifi on";
 inline const char * CMD_WIFI_CHECK = "nmcli radio wifi";
