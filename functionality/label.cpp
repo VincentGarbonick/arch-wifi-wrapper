@@ -10,7 +10,6 @@ namespace label
     // it just tells us what label to use
     const char * get_wifi_button_label()
     {
-		std::cout << get_wifi_status() << std::endl;
 		if(get_wifi_status() == NMCLI_WIFI_ENABLED)
 		{
 			return ENABLED_WIFI;
@@ -23,7 +22,7 @@ namespace label
 
     std::string get_initial_current_conn_label()
     {
-    	if(get_wifi_status() == DISABLED_WIFI)
+    	if(get_wifi_status() == NMCLI_WIFI_DISABLED)
     	{
     		return NO_WIFI_WIFI_STATUS_BAR;
     	}
