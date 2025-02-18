@@ -34,12 +34,17 @@ void scan(Fl_Widget* w, void* p)
 	{
 		parsed_ncmli_element_output = parse_nmcli_list_output(line, false);
 		std::ostringstream format_stream;
-    	format_stream 
-				<< parsed_ncmli_element_output.full_mac 
-				<< "\t" 
-				<< parsed_ncmli_element_output.network_name;
-    	std::string formatted_line = format_stream.str();
-		s_args->browser->add(formatted_line.c_str());
+		// we only want to display networks with an SSID
+		if(parsed_ncmli_element_output.network_name != "")
+		{
+			format_stream 
+			<< parsed_ncmli_element_output.full_mac 
+			<< "\t" 
+			<< parsed_ncmli_element_output.network_name;
+
+			std::string formatted_line = format_stream.str();
+			s_args->browser->add(formatted_line.c_str());
+		}
     }
 	return;
 }
