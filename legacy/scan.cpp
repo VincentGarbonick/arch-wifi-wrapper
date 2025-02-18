@@ -34,9 +34,14 @@ void scan(Fl_Widget* w, void* p)
 	{
 		// parsed_ncmli_element_output = parse_nmcli_list_output(line, false);
 		std::ostringstream format_stream;
-		// some connections have a bssid but not an ssid
+		// we only want to display networks with an SSID
 		if(line != "")
 		{
+			// format_stream 
+			// << parsed_ncmli_element_output.full_mac 
+			// << "\t" 
+			// << parsed_ncmli_element_output.network_name;
+
 			// TOOD: get some kind of signal strenght bar in here before the SSID
 			format_stream << line;
 
