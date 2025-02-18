@@ -6,7 +6,7 @@
 CXX = g++
 
 # Compiler flags
-CXXFLAGS = -Wall -Wextra -std=c++17
+CXXFLAGS = -Wall -Wextra -std=c++17 -MMD -MP  # -MMD generates dependencies, -MP handles missing headers
 
 # Libraries
 LIBS = -lfltk
@@ -25,6 +25,9 @@ SRC = main.cpp \
 # Object files (replace .cpp with .o)
 OBJ = $(SRC:.cpp=.o)
 
+# Dependency files
+DEPS = $(OBJ:.o=.d)
+
 # Output binary
 TARGET = a.out
 
@@ -35,13 +38,16 @@ all: $(TARGET)
 $(TARGET): $(OBJ)
 	$(CXX) $(CXXFLAGS) -o $(TARGET) $(OBJ) $(LIBS)
 
-# Compile source files to object files
+# Compile source files to object files (with dependency tracking)
 %.o: %.cpp
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
+# Include dependency files if they exist
+-include $(DEPS)
+
 # Clean build files
 clean:
-	rm -f $(OBJ) $(TARGET)
+	rm -f $(OBJ) $(DEPS) $(TARGET)
 
 # Phony targets
 .PHONY: all clean

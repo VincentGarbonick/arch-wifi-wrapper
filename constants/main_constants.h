@@ -81,8 +81,8 @@ inline const std::string TOGGLE_WIFI_NETWORK_PLACEHOLDER = "Reconnected to netwo
 inline const std::string CONNECTION_PREFIX = "Connected to ";
 
 // commands
-inline const char * CMD_SCAN_WIFI = "nmcli --terse --get-values ssid device wifi list";
-// inline const char * CMD_SCAN_WIFI = "nmcli --terse --get-values bssid,ssid device wifi list";
+// inline const char * CMD_SCAN_WIFI = "nmcli --terse --get-values ssid device wifi list";
+inline const char * CMD_SCAN_WIFI = "nmcli --terse --get-values bssid,ssid device wifi list";
 inline const char * CMD_WIFI_OFF = "nmcli radio wifi off";
 inline const char * CMD_WIFI_ON = "nmcli radio wifi on";
 inline const char * CMD_WIFI_CHECK = "nmcli radio wifi";
