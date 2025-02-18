@@ -2,8 +2,6 @@
 #include "run.h"
 #include "toggle.h"
 
-#include <iostream>
-
 namespace label 
 {
     // this is for when we first draw the button
