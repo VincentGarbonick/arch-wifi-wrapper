@@ -77,7 +77,7 @@ inline const char * DISABLED_WIFI = "Wifi Disabled";
 inline const char * HELP = "Help";
 inline const char * EXIT = "Exit";
 inline const char * WELCOME_MESSAGE = "Welcome to the arch nmcli wrapper!";
-inline const std::string CONNECTION_PREFIX = "You are connected to ";
+inline const std::string CONNECTION_PREFIX = "Connected to ";
 
 // commands
 inline const char * CMD_SCAN_WIFI = "nmcli --terse --get-values ssid device wifi list";
@@ -96,9 +96,9 @@ inline const int RAW_MAC_ADDR_END = 22;
 inline const char * EXECUTION_ERROR = "Error executing command";
 inline const char * SCAN_SUCCESSFUL = "Scan successful!";
 inline const char * TOGGLE_ERROR = "Error toggling wifi!";
-inline const char * DISABLED_SUCCESSFUL_MESSAGE = "You have disabled the wifi.";
-inline const char * ENABLED_SUCCESSFUL_MESSAGE = "You have enabled the wifi.";
-inline const std::string NO_WIFI_WIFI_STATUS_BAR = "You are disconnected from wifi.";
+inline const char * DISABLED_SUCCESSFUL_MESSAGE = "Disabled wifi.";
+inline const char * ENABLED_SUCCESSFUL_MESSAGE = "Enabled wifi.";
+inline const std::string NO_WIFI_WIFI_STATUS_BAR = "Disconnected from wifi.";
 
 // procedural button labels 
 inline const std::string NMCLI_WIFI_ENABLED = "enabled";
