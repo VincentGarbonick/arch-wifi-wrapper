@@ -11,7 +11,6 @@
 #include "../constants/main_constants.h"
 #include "../constants/callback_data.h"
 
-// TODO: update wifi status bar when you toggle shit, by using the print_wifi_status funciton 
 void toggle_wifi(Fl_Widget* wifi_button, void* t)
 {
 	callback_data::toggle_args* toggle_args = (callback_data::toggle_args*)t;
