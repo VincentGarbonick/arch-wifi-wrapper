@@ -1,3 +1,4 @@
 a.out
+*.o
 *secret.txt
 $MYVIMDIR*
