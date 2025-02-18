@@ -32,16 +32,15 @@ void scan(Fl_Widget* w, void* p)
 	// TODO: color output
     while(std::getline(stream, line)) 
 	{
-		std::cout << line << std::endl;
 		parsed_ncmli_element_output = parse_nmcli_list_output(line, false);
 		std::ostringstream format_stream;
 		// we only want to display networks with an SSID
-		if(line != "")
+		if(parsed_ncmli_element_output.ssid != "")
 		{
 			format_stream 
-			<< parsed_ncmli_element_output.full_mac 
-			<< "\t" 
-			<< parsed_ncmli_element_output.network_name;
+			<< parsed_ncmli_element_output.bssid 
+			<< "\t\t"
+			<< parsed_ncmli_element_output.ssid;
 
 			std::string formatted_line = format_stream.str();
 			s_args->browser->add(formatted_line.c_str());

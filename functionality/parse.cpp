@@ -21,8 +21,8 @@ parsed_ncmli_list_output parse_nmcli_list_output(std::string line, bool include_
     }
 
     return {
-        .full_mac = mac_component,
-        .network_name = network_name_component,
+        .bssid = mac_component,
+        .ssid = network_name_component,
         .full_output = line,
         .include_escape = include_escape,
     };
