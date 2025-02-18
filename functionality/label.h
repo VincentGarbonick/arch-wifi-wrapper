@@ -5,8 +5,9 @@
 
 namespace label 
 {
-    std::string get_initial_current_conn_label();
-    const char * get_wifi_button_label();
+    std::string get_wifi_connection_ssid_label();
+    std::string get_wifi_connection_ssid_label_toggle();
+    const char * get_wifi_radio_label();
 }
 
 #endif

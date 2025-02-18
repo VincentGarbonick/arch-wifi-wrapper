@@ -67,7 +67,7 @@ void draw_main_app(int argc, char **argv)
 					ENABLE_BUTTON_OFFSET_Y,
 					ENABLE_BUTTON_WIDTH,
 					ENABLE_BUTTON_HEIGHT,
-					label::get_wifi_button_label()
+					label::get_wifi_radio_label()
 				);
 
 	Fl_Button *help_button = new Fl_Button(
@@ -87,13 +87,15 @@ void draw_main_app(int argc, char **argv)
 	);
 	status_bar->value(WELCOME_MESSAGE);
 	status_bar->redraw();
-	current_bar->value(label::get_initial_current_conn_label().c_str());
+	current_bar->value(label::get_wifi_connection_ssid_label().c_str());
 	current_bar->redraw();
 
 	static scan_args s_args{browser, status_bar};
 	scan_button->callback(scan, &s_args);
 
-	enable_button->callback(toggle_wifi, status_bar);
+	static callback_data::toggle_args t_args{current_bar, status_bar};
+	enable_button->callback(toggle_wifi, &t_args);
+
 	exit_button->callback(close_app);
 	window->end();
 	window->show(argc, argv);

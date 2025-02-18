@@ -16,4 +16,13 @@ struct connect_args
     Fl_Output * output;
 };
 
+namespace callback_data
+{
+    struct toggle_args 
+    {
+        Fl_Output * wifi_status;
+        Fl_Output * output;
+    };
+}
+
 #endif

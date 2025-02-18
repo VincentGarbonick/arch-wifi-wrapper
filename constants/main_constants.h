@@ -77,6 +77,7 @@ inline const char * DISABLED_WIFI = "Wifi Disabled";
 inline const char * HELP = "Help";
 inline const char * EXIT = "Exit";
 inline const char * WELCOME_MESSAGE = "Welcome to the arch nmcli wrapper!";
+inline const std::string TOGGLE_WIFI_NETWORK_PLACEHOLDER = "Reconnected to network";
 inline const std::string CONNECTION_PREFIX = "Connected to ";
 
 // commands
