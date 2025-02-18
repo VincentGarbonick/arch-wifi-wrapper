@@ -47,15 +47,4 @@ void scan(Fl_Widget* w, void* p)
 	return;
 }
 
-// TODO move this to connection.cpp when you get the chance, or a beter place
-std::string print_wifi_status_label()
-{
-	if(get_wifi_status() == DISABLED_WIFI)
-	{
-		return NO_WIFI_WIFI_STATUS_BAR;
-	}
-	else 
-	{
-		return run_command(CMD_GET_CURRENT_CONN);
-	}
-}
+

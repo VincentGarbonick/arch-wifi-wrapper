@@ -12,7 +12,10 @@ namespace connect
         string ssid;
     };
 
+    string get_current_conn_label()
+    {
 
+    }
 }
 
 #endif

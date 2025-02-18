@@ -77,6 +77,7 @@ inline const char * DISABLED_WIFI = "Wifi Disabled";
 inline const char * HELP = "Help";
 inline const char * EXIT = "Exit";
 inline const char * WELCOME_MESSAGE = "Welcome to the arch nmcli wrapper!";
+inline const std::string CONNECTION_PREFIX = "You are connected to ";
 
 // commands
 inline const char * CMD_SCAN_WIFI = "nmcli --terse --get-values ssid device wifi list";

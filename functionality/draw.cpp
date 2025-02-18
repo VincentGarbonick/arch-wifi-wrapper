@@ -7,6 +7,7 @@
 #include "run.h"
 #include "exit.h"
 #include "toggle.h"
+#include "label.h"
 #include "../constants/main_constants.h"
 #include "../constants/no_nmcli_constants.h"
 #include "../constants/callback_data.h"
@@ -15,7 +16,6 @@
 // or is it safe to do so?
 void draw_main_app(int argc, char **argv)
 {
-	// TODO: put initial wifi con into wifi status bar when initializing applicaiton
 	Fl_Window *window = new Fl_Window(PARENT_WIDTH, PARENT_HEIGHT, APPNAME);
  	Fl_Select_Browser *browser = new Fl_Select_Browser(
 					WIFI_BROWSER_OFFSET_X, 
@@ -67,7 +67,7 @@ void draw_main_app(int argc, char **argv)
 					ENABLE_BUTTON_OFFSET_Y,
 					ENABLE_BUTTON_WIDTH,
 					ENABLE_BUTTON_HEIGHT,
-					return_wifi_status_label()
+					label::get_wifi_button_label()
 				);
 
 	Fl_Button *help_button = new Fl_Button(
@@ -87,9 +87,12 @@ void draw_main_app(int argc, char **argv)
 	);
 	status_bar->value(WELCOME_MESSAGE);
 	status_bar->redraw();
-	std::cout << run_command(CMD_GET_CURRENT_CONN) << std::endl;
+	current_bar->value(label::get_initial_current_conn_label().c_str());
+	current_bar->redraw();
+
 	static scan_args s_args{browser, status_bar};
 	scan_button->callback(scan, &s_args);
+
 	enable_button->callback(toggle_wifi, status_bar);
 	exit_button->callback(close_app);
 	window->end();
