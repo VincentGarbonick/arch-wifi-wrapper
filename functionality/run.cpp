@@ -54,7 +54,17 @@ std::string run_command(const std::string& command, Fl_Output * output)
     return result;
 }
 
-int run_command_get_exit_status(const char * command)
+int run_command_get_exit_status(const char* command)
 {
-    return system(command);
+    int ret = system(command);
+    
+    if (ret == -1) {
+        return -1;  // system() call failed
+    }
+    
+    if (WIFEXITED(ret)) {
+        return WEXITSTATUS(ret);  // Return the actual exit status
+    }
+    
+    return -1;  // Command was terminated by a signal
 }
