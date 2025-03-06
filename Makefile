@@ -20,7 +20,8 @@ SRC = main.cpp \
       ./functionality/toggle.cpp \
       ./functionality/draw.cpp \
       ./functionality/connect.cpp \
-      ./functionality/label.cpp
+      ./functionality/label.cpp \
+      ./constants/main_constants.cpp
 
 # Object files (replace .cpp with .o)
 OBJ = $(SRC:.cpp=.o)

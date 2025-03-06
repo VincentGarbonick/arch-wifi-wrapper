@@ -87,6 +87,10 @@ inline const char * CMD_WIFI_OFF = "nmcli radio wifi off";
 inline const char * CMD_WIFI_ON = "nmcli radio wifi on";
 inline const char * CMD_WIFI_CHECK = "nmcli radio wifi";
 inline const char * CMD_GET_CURRENT_CONN = "nmcli -t -f NAME,TYPE connection show --active | grep -vE '^(lo|Wired connection)' | awk -F: '$2 != 'ethernet' {print $1}'";
+inline const std::string CMD_CHECK_STORED_CONN_1 = "nmcli -t -f BSSID,SSID dev wifi list | grep -q ";
+inline const std::string CMD_CHECK_STORED_CONN_2 = "; echo $?";
+// we need to do this bc the command in of itself is incomplete
+std::string CONCAT_CMD_CHECK_STORED_CONN(std::string, std::string); 
 
 // positions for mac address
 inline const int RAW_MAC_ADDR_START = 0;
@@ -106,6 +110,10 @@ inline const std::string NO_WIFI_WIFI_STATUS_BAR = "Disconnected from wifi.";
 // procedural button labels 
 inline const std::string NMCLI_WIFI_ENABLED = "enabled";
 inline const std::string NMCLI_WIFI_DISABLED = "disabled";
+
+// success/error codes for commands 
+inline const int STATUS_CHECK_HAS_CONN_STORED = 0;
+inline const int STATUS_CHECK_DOES_NOT_HAVE_CONN_STORED = 1; 
 
 // misc values for debugging and testing 
 inline const char * TEST_SCAN_LINE = "AA:BB:CC:DD:EE:FF\t\tTest Network";

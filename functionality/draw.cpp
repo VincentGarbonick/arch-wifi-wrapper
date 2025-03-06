@@ -92,6 +92,8 @@ void draw_main_app(int argc, char **argv)
 	current_bar->value(label::get_wifi_connection_ssid_label().c_str());
 	current_bar->redraw();
 
+	CONCAT_CMD_CHECK_STORED_CONN("fuck", "you");
+
 	static scan_args s_args{browser, status_bar};
 	scan_button->callback(scan, &s_args);
 

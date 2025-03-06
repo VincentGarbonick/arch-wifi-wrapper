@@ -2,6 +2,7 @@
 #define CONNECT_H
 
 #include <string>
+#include "./parse.h"
 
 using std::string;
 
@@ -17,6 +18,8 @@ namespace connect
     // {
 
     // };
+    bool has_connection_stored(network_data_basic);
+
 }
 
 #endif
