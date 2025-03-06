@@ -10,3 +10,4 @@
 ## extremely low prio 
 1. "conneceted" label should display nothing if we don't have any active connection. We also just aren't generally handling dropped/reconnected stuff very well 
 2. can you make it so all the .o files are put into a directory? That would be swell for the makefile. Maybe make your own makefile.
+3. some kind of debug flag so all of your console logs aren't superfluous

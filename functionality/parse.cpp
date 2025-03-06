@@ -44,3 +44,35 @@ network_data_basic parse_scan_line(const char * scan_line)
         .ssid = ssid,
     };
 }
+
+// https://www.geeksforgeeks.org/find-and-replace-all-occurrences-of-a-substring-in-string-in-cpp/
+std::string escape_mac_address(std::string mac_address) 
+{
+    // Input string
+    std::string input = mac_address;
+
+    // Substring to find
+    std::string replace_word = ":";
+
+    // Replacement string
+    std::string replace_by = "\\\\:";
+
+    // Find the first occurrence of the substring
+    size_t pos = input.find(replace_word);
+
+    // Iterate through the string and replace all
+    // occurrences
+    while (pos != std::string::npos) {
+        // Replace the substring with the specified string
+        input.replace(pos, replace_word.size(), replace_by);
+
+        // Find the next occurrence of the substring
+        pos = input.find(replace_word,
+                         pos + replace_by.size());
+    }
+
+    // Print the modified string
+    // std::cout << "New String is: " << input << std::endl;
+
+    return input;
+}
