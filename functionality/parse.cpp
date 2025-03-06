@@ -1,6 +1,7 @@
 #include <string>
 #include <iostream>
 #include <algorithm>
+#include "parse.h"
 #include "../constants/mac.h"
 #include "../constants/main_constants.h"
 
@@ -20,10 +21,26 @@ parsed_ncmli_list_output parse_nmcli_list_output(std::string line, bool include_
                                         mac_component.end());
     }
 
-    return {
+    return 
+    {
         .bssid = mac_component,
         .ssid = network_name_component,
         .full_output = line,
         .include_escape = include_escape,
+    };
+}
+
+network_data_basic parse_scan_line(const char * scan_line) 
+{
+    std::string scan_line_string = scan_line; 
+    std::string bssid = scan_line_string.substr(PARSED_MAC_ADDR_START, PARSED_MAC_ADDR_END);
+    std::string ssid = scan_line_string.substr(PARSED_MAC_ADDR_END + 2, scan_line_string.length());
+    bssid.erase(std::remove(bssid.begin(), bssid.end(), '\n'), bssid.end());
+    ssid.erase(std::remove(ssid.begin(), ssid.end(), '\n'), ssid.end());
+
+    return 
+    {
+        .bssid = bssid,
+        .ssid = ssid,
     };
 }

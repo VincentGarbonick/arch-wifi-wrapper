@@ -8,6 +8,8 @@
 #include "exit.h"
 #include "toggle.h"
 #include "label.h"
+#include "connect.h"
+#include "parse.h"
 #include "../constants/main_constants.h"
 #include "../constants/no_nmcli_constants.h"
 #include "../constants/callback_data.h"

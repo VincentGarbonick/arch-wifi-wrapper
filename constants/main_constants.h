@@ -91,6 +91,8 @@ inline const char * CMD_GET_CURRENT_CONN = "nmcli -t -f NAME,TYPE connection sho
 // positions for mac address
 inline const int RAW_MAC_ADDR_START = 0;
 inline const int RAW_MAC_ADDR_END = 22;
+inline const int PARSED_MAC_ADDR_START = 0;
+inline const int PARSED_MAC_ADDR_END = 17;
 
 // output messages
 // TODO: append OUTPUT_
@@ -104,4 +106,7 @@ inline const std::string NO_WIFI_WIFI_STATUS_BAR = "Disconnected from wifi.";
 // procedural button labels 
 inline const std::string NMCLI_WIFI_ENABLED = "enabled";
 inline const std::string NMCLI_WIFI_DISABLED = "disabled";
+
+// misc values for debugging and testing 
+inline const char * TEST_SCAN_LINE = "AA:BB:CC:DD:EE:FF\t\tTest Network";
 #endif
